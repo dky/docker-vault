@@ -1,6 +1,6 @@
-# Vault Playground
+# Vault Docker Sandbox Playground
 
-This my notes on playing with Vault in a Sandbox environment.
+This repo contains my notes and a complete playground environment to mess around with Hashicorp Vault.
 
 ```
 export VAULT_ADDR=http://127.0.0.1:8200
@@ -21,7 +21,9 @@ vault kv put [storepath]/[keyname] key=value
 
 ## Retrieve the secret above
 
+```bash
 vault kv get [storepath]/[keyname]
+```
 
 ```bash
 vault kv get secret/dky
@@ -33,6 +35,6 @@ Run the write/put command above again.
 
 ## Delete a secret
 
+```bash
 vault kv delete [storepaty/keyname]
-
-
+```
