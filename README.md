@@ -2,9 +2,17 @@
 
 This repo contains my notes and a complete playground environment to mess around with Hashicorp Vault.
 
+To use the CLI export
+
 ```
 export VAULT_ADDR=http://127.0.0.1:8200
 export VAULT_TOKEN=token
+```
+
+or run:
+
+```
+source export.sh
 ```
 
 # Basic Secret Management
@@ -16,7 +24,7 @@ vault kv put [storepath]/[keyname] key=value
 ```
 
 ```bash
- vault kv put secret/dky mypass=abc1234
+vault kv put secret/dky mypass=abc1234
 ```
 
 ## Retrieve the secret above
