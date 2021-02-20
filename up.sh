@@ -5,6 +5,7 @@ CONTAINER=vault
 docker stop $CONTAINER || true && docker rm $CONTAINER || true
 
 docker run \
+	--restart=always \
 	--cap-add=IPC_LOCK \
 	--cap-add=IPC_LOCK \
 	--name=$CONTAINER \
