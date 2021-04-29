@@ -44,5 +44,9 @@ Run the write/put command above again.
 ## Delete a secret
 
 ```bash
-vault kv delete [storepaty/keyname]
+vault kv delete [storepath/keyname]
 ```
+
+## Differences between version 1 and 2 of k/v
+
+1. Version 1 has no versioning where as version 2 has a history of 10.
