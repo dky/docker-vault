@@ -1,6 +1,5 @@
-#!/bin/bash
-#Exports the VAULT_ADDR for testing + the Root token
-#Usage: source export.sh TOKEN_FROM_LOGS
+# Exports the VAULT_ADDR for testing + the Root token
+# Usage: source export-env TOKEN_FROM_LOGS
 
 ROOT_TOKEN="${VARIABLE:=token}"
 
