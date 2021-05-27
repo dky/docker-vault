@@ -11,6 +11,7 @@ docker run \
 	--name=$CONTAINER \
 	-e 'VAULT_DEV_ROOT_TOKEN_ID=token' \
 	-e 'VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:8200' \
+	-e 'VAULT_LOCAL_CONFIG={"backend": {"file": {"path": "/vault/file"}}, "default_lease_ttl": "168h", "max_lease_ttl": "720h"}' \
 	-p 8200:8200 \
 	-d \
 	vault
