@@ -12,4 +12,4 @@ services:
     ports:
       - 8200:8200
     volumes:
-      - $PWD/data/grafana:/var/lib/grafana
+      - $PWD/data/vault:/vault/file
