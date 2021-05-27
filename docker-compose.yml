@@ -11,5 +11,7 @@ services:
       - 'VAULT_LOCAL_CONFIG={"backend": {"file": {"path": "/vault/file"}}, "default_lease_ttl": "168h", "max_lease_ttl": "720h"}'
     ports:
       - 8200:8200
+    cap_add:
+      - IPC_LOCK
     volumes:
       - $PWD/data/vault:/vault/file
