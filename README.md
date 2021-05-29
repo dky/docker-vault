@@ -17,10 +17,16 @@ source export-env
 
 # Basic Secret Management
 
-## Enabling a secret engine
+## Enabling a v1 kv secret engine at the path `secret`
 
 ```
 vault secrets enable -path=secret/ kv
+```
+
+## Enable a v2 kv secret engine at the path `dky`
+
+```
+vault secrets enable -path=dky -version=2 kv
 ```
 
 ## Write a secret to the KV store
