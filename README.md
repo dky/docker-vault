@@ -2,7 +2,7 @@
 
 This repo contains my notes and a complete playground environment to mess around with Hashicorp Vault.
 
-To use the CLI export
+To use the CLI export the following environment variables. If the Vault container is hosted on a remote host set this to a remote IP address.
 
 ```
 export VAULT_ADDR=http://127.0.0.1:8200
@@ -12,10 +12,16 @@ export VAULT_TOKEN=token
 or run:
 
 ```
-source export.sh
+source export-env
 ```
 
 # Basic Secret Management
+
+## Enabling a secret engine
+
+```
+vault secrets enable -path=secret/ kv
+```
 
 ## Write a secret to the KV store
 
