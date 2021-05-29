@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Use the docker-compose-dev.yml file instead of this one directory up.
 
 CONTAINER=vault
 
