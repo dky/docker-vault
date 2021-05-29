@@ -1,9 +1,8 @@
 #/usr/bin/env bash
+# Writes whatever is in `secrets.json` into a v1 store.
 
-cd $(dirname $0)
-
-curl --header "X-Vault-Token: token" \
+curl --header "X-Vault-Token: $VAULT_TOKEN" \
 	--request POST \
 	--data @secrets.json \
-	http://localhost:8200/v1/test/data/ihub/dev
+	$VAULT_ADDR/v1/secret/data/ihub/dev
 
