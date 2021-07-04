@@ -1,7 +1,9 @@
 version: "3.7"
+
 services:
   vault:
     image: vault:1.7.3
+    network_mode: host
     container_name: vault
     hostname: vault
     ports:
@@ -11,6 +13,7 @@ services:
       - vault-data:/vault/file/
     environment:
       - VAULT_ADDR=http://0.0.0.0:8200
+      - SERVICE_NAME=vault
     cap_add:
       - IPC_LOCK
     command: server
